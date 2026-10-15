@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phần 2: Form Đăng Ký Học Viên</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 20px;
+        }
+        .form-card {
+            background: #ffffff;
+            padding: 25px 35px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #1a73e8;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label.field-label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 9px 12px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        textarea {
+            resize: vertical;
+            height: 80px;
+        }
+        .inline-group label {
+            display: inline-block;
+            font-weight: normal;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        .btn-group {
+            margin-top: 25px;
+            text-align: center;
+        }
+        .btn-submit {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-reset {
+            background-color: #5f6368;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .btn-submit:hover { background-color: #1557b0; }
+        .btn-reset:hover { background-color: #3c4043; }
+    </style>
+</head>
+<body>
+
+    <div class="form-card">
+        <h2>ĐĂNG KÝ HỌC VIÊN</h2>
+        <form action="#" method="POST">
+            
+            <div class="form-group">
+                <label class="field-label" for="fullname">Họ và tên:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Nhập đầy đủ họ tên" required>
+            </div>
+
+            <div class="form-group">
+                <label class="field-label" for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+            </div>
+
+            <div class="form-group">
+                <label class="field-label" for="phone">Số điện thoại:</label>
+                <input type="text" id="phone" name="phone" placeholder="Nhập số điện thoại">
+            </div>
+
+            <div class="form-group">
+                <label class="field-label" for="birthday">Ngày sinh:</label>
+                <input type="date" id="birthday" name="birthday">
+            </div>
+
+            <div class="form-group inline-group">
+                <label class="field-label">Giới tính:</label>
+                <input type="radio" id="male" name="gender" value="Nam">
+                <label for="male">Nam</label>
+                
+                <input type="radio" id="female" name="gender" value="Nữ">
+                <label for="female">Nữ</label>
+                
+                <input type="radio" id="other" name="gender" value="Khác">
+                <label for="other">Khác</label>
+            </div>
+
+            <div class="form-group">
+                <label class="field-label" for="address">Địa chỉ:</label>
+                <textarea id="address" name="address" placeholder="Nhập địa chỉ của bạn..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="field-label" for="course">Khóa học:</label>
+                <select id="course" name="course">
+                    <option value="HTML & CSS">HTML & CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Java">Java</option>
+                    <option value="Python">Python</option>
+                </select>
+            </div>
+
+            <div class="form-group inline-group">
+                <label class="field-label">Hình thức học:</label>
+                <input type="radio" id="online" name="study_type" value="Online">
+                <label for="online">Online</label>
+                
+                <input type="radio" id="offline" name="study_type" value="Offline">
+                <label for="offline">Offline</label>
+            </div>
+
+            <div class="form-group inline-group">
+                <label class="field-label">Sở thích:</label>
+                <input type="checkbox" id="code" name="hobby" value="Lập trình">
+                <label for="code">Lập trình</label>
+                
+                <input type="checkbox" id="game" name="hobby" value="Chơi game">
+                <label for="game">Chơi game</label>
+                
+                <input type="checkbox" id="read" name="hobby" value="Đọc sách">
+                <label for="read">Đọc sách</label>
+            </div>
+
+            <div class="form-group">
+                <label class="field-label" for="note">Ghi chú:</label>
+                <textarea id="note" name="note" placeholder="Ghi chú thêm..."></textarea>
+            </div>
+
+            <div class="btn-group">
+                <input type="submit" class="btn-submit" value="Đăng ký">
+                <input type="reset" class="btn-reset" value="Nhập lại">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>

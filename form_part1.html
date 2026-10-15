@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phần 1: Form Đơn Giản</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 20px;
+        }
+        .form-container {
+            background: #ffffff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 8px 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .checkbox-group label {
+            display: inline-block;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+        .btn-group {
+            margin-top: 20px;
+        }
+        input[type="submit"] {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        input[type="reset"] {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        input[type="submit"]:hover { background-color: #219150; }
+        input[type="reset"]:hover { background-color: #c0392b; }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>THÔNG TIN CÁ NHÂN</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="yourname">Họ và tên:</label>
+                <input type="text" id="yourname" name="yourname" placeholder="Nhập họ và tên..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Nhập địa chỉ email..." required>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label>Sở thích:</label><br>
+                <input type="checkbox" id="sport" name="hobby" value="Thể thao">
+                <label for="sport">Thể thao</label>
+                
+                <input type="checkbox" id="music" name="hobby" value="Âm nhạc">
+                <label for="music">Âm nhạc</label>
+                
+                <input type="checkbox" id="reading" name="hobby" value="Đọc sách">
+                <label for="reading">Đọc sách</label>
+                
+                <input type="checkbox" id="travel" name="hobby" value="Du lịch">
+                <label for="travel">Du lịch</label>
+            </div>
+
+            <div class="btn-group">
+                <input type="submit" value="Gửi thông tin">
+                <input type="reset" value="Nhập lại">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
